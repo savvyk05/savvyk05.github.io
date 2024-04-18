@@ -5,32 +5,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shashank Khanna's Resume</title>
     <style>
+        /* Base styles */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            background-color: #f4f4f4;
         }
-        header, section {
-            margin-bottom: 20px;
+
+        /* Header styles */
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
         }
+
+        /* Main heading styles */
         h1 {
-            font-size: 24px;
-            margin-bottom: 10px;
+            margin: 10px 0;
         }
+
+        /* Section heading styles */
         h2 {
-            font-size: 20px;
-            margin-bottom: 10px;
+            margin: 20px 0 10px 0;
+            color: #333;
         }
-        p {
-            font-size: 16px;
-            margin-bottom: 5px;
+
+        /* Subsection heading styles */
+        h3 {
+            margin: 15px 0 5px 0;
+            color: #555;
         }
+
+        /* Section styles */
+        section {
+            background-color: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        /* List styles */
         ul {
             list-style-type: none;
             padding: 0;
         }
+
+        /* List item styles */
         li {
             margin-bottom: 5px;
+        }
+
+        /* Container styles */
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        /* Company logo styles */
+        .company-logo {
+            width: 100px;
+            height: auto;
+            margin-right: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
         }
     </style>
 </head>
@@ -41,60 +82,66 @@
         <p>Graduate Student Assistant at Stevens Institute of Technology | ExMphasis</p>
         <p>Jersey City, New Jersey, United States</p>
     </header>
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Mobile: 551-227-5645</p>
-        <p>Email: skhanna5@stevens.edu</p>
-        <p>LinkedIn: <a href="www.linkedin.com/in/shashankkhanna">Shashank Khanna</a></p>
-    </section>
-    <section id="skills">
-        <h2>Top Skills</h2>
-        <ul>
-            <li>Sales Management</li>
-            <li>Decision-Making</li>
-            <li>Risk Management</li>
-        </ul>
-    </section>
-    <section id="certifications">
-        <h2>Certifications</h2>
-        <ul>
-            <li>Data Exploration and Visualization for Risk and Decision Making - Graduate Certificate Program</li>
-            <li>Agile Project Management with Microsoft Project</li>
-            <li>Lean Six Sigma Foundations</li>
-        </ul>
-    </section>
-    <section id="summary">
-        <h2>Summary</h2>
-        <p>With a background in software engineering and data analysis, I am pursuing a Master of Engineering in Engineering/Industrial Management at Stevens Institute of Technology, where I am learning the fundamentals of business strategy, project management, and innovation. My goal is to become a technology leader who can bridge the gap between technical and business aspects of complex problems.</p>
-        <p>I am also an Impact Fellow at Global Governance Initiative, a global initiative that upskills individuals in various domains such as product management, management consulting, and impact investment, by engaging with industry professionals and practitioners. Through this program, I am developing critical problem-solving skills and gaining hands-on experience in tackling real-world challenges. Additionally, I am passionate about exploring emerging fields such as wearable technology, generative AI, and data analytics, and applying them to create innovative solutions. As the Secretary of the Business Intelligence and Analytics Club at Stevens, I collaborate with peers to organize events and activities that foster learning and networking opportunities. I am excited about the possibilities that lie ahead and am committed to making a meaningful impact in the ever-evolving landscape of technology.</p>
-    </section>
-    <section id="experience">
-        <h2>Experience</h2>
-        <h3>Global Governance Initiative</h3>
-        <p>Impact Fellow</p>
-        <p>February 2024 - Present (3 months)</p>
-        <p>Among the top 5% of 15000+ applicants who are selected for the Global Governance Initiative Impact Fellowship program.</p>
-        <p>A 6-month global initiative that aims to upskill individuals in various domains like product management, management consulting, and impact investment, by engaging with industry professionals and practitioners.</p>
-        <p>Greater bent towards learning by doing and cultivation of critical problem-solving skills.</p>
-        <h3>Stevens Institute of Technology</h3>
-        <p>Graduate Student Assistant</p>
-        <p>September 2023 - Present (8 months)</p>
-        <p>Hoboken, New Jersey, United States</p>
-        <p>Working with the Development and Alumni Engagement Department with the following duties:</p>
-        <ul>
-            <li>Executes grant application management by organizing materials for faculty researchers and grant writers to draft five-and-six-figure proposals for scientific research and programs for underserved students, and prepare for submission.</li>
-            <li>Undertaking a materials management project, archiving 75+ year-old university and external documents for historical preservation and compliance with records management.</li>
-            <li>Responsible for contributing and managing proprietary lead and customer data in the university’s customer relations management software for department effectiveness.</li>
-        </ul>
-        <!-- Add more experience if needed -->
-    </section>
-    <section id="education">
-        <h2>Education</h2>
-        <h3>Stevens Institute of Technology</h3>
-        <p>Master of Engineering - MEng, Engineering/Industrial Management · (September 2022 - May 2024)</p>
-        <h3>Manipal Institute of Technology</h3>
-        <p>BTech - Bachelor of Technology, Electrical, Electronics and Communications Engineering · (2014 - 2018)</p>
-    </section>
-    <!-- Add more sections if needed -->
+    <div class="container">
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Mobile: 551-227-5645</p>
+            <p>Email: skhanna5@stevens.edu</p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/shashankkhanna">Shashank Khanna</a></p>
+        </section>
+        <section id="skills">
+            <h2>Top Skills</h2>
+            <ul>
+                <li>Sales Management</li>
+                <li>Decision-Making</li>
+                <li>Risk Management</li>
+            </ul>
+        </section>
+        <section id="certifications">
+            <h2>Certifications</h2>
+            <ul>
+                <li>Data Exploration and Visualization for Risk and Decision Making - Graduate Certificate Program</li>
+                <li>Agile Project Management with Microsoft Project</li>
+                <li>Lean Six Sigma Foundations</li>
+            </ul>
+        </section>
+        <section id="summary">
+            <h2>Summary</h2>
+            <img src="your-photo.jpg" alt="Your Photo" class="company-logo">
+            <p>With a background in software engineering and data analysis, I am pursuing a Master of Engineering in Engineering/Industrial Management at Stevens Institute of Technology, where I am learning the fundamentals of business strategy, project management, and innovation. My goal is to become a technology leader who can bridge the gap between technical and business aspects of complex problems.</p>
+            <p>I am also an Impact Fellow at Global Governance Initiative, a global initiative that upskills individuals in various domains such as product management, management consulting, and impact investment, by engaging with industry professionals and practitioners. Through this program, I am developing critical problem-solving skills and gaining hands-on experience in tackling real-world challenges. Additionally, I am passionate about exploring emerging fields such as wearable technology, generative AI, and data analytics, and applying them to create innovative solutions. As the Secretary of the Business Intelligence and Analytics Club at Stevens, I collaborate with peers to organize events and activities that foster learning and networking opportunities. I am excited about the possibilities that lie ahead and am committed to making a meaningful impact in the ever-evolving landscape of technology.</p>
+        </section>
+        <section id="experience">
+            <h2>Experience</h2>
+            <img src="company-logo1.jpg" alt="Company Logo 1" class="company-logo">
+            <h3>Global Governance Initiative</h3>
+            <p>Impact Fellow</p>
+            <p>February 2024 - Present (3 months)</p>
+            <p>Among the top 5% of 15000+ applicants who are selected for the Global Governance Initiative Impact Fellowship program.</p>
+            <p>A 6-month global initiative that aims to upskill individuals in various domains like product management, management consulting, and impact investment, by engaging with industry professionals and practitioners.</p>
+            <p>Greater bent towards learning by doing and cultivation of critical problem-solving skills.</p>
+            <img src="stevens-logo.jpg" alt="Company Logo 2" class="company-logo">
+            <h3>Stevens Institute of Technology</h3>
+            <p>Graduate Student Assistant</p>
+            <p>September 2023 - Present (8 months)</p>
+            <p>Hoboken, New Jersey, United States</p>
+            <p>Working with the Development and Alumni Engagement Department with the following duties:</p>
+            <ul>
+                <li>Executes grant application management by organizing materials for faculty researchers and grant writers to draft five-and-six-figure proposals for scientific research and programs for underserved students, and prepare for submission.</li>
+                <li>Undertaking a materials management project, archiving 75+ year-old university and external documents for historical preservation and compliance with records management.</li>
+                <li>Responsible for contributing and managing proprietary lead and customer data in the university’s customer relations management software for department effectiveness.</li>
+            </ul>
+            <!-- Add more experience if needed -->
+        </section>
+        <section id="education">
+            <h2>Education</h2>
+            <img src="stevens-logo.jpg" alt="Stevens Logo" class="company-logo">
+            <h3>Stevens Institute of Technology</h3>
+            <p>Master of Engineering - MEng, Engineering/Industrial Management · (September 2022 - May 2024)</p>
+            <h3>Manipal Institute of Technology</h3>
+            <p>BTech - Bachelor of Technology, Electrical, Electronics and Communications Engineering · (2014 - 2018)</p>
+        </section>
+        <!-- Add more sections if needed -->
+    </div>
 </body>
 </html>
