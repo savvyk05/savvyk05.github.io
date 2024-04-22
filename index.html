@@ -262,38 +262,51 @@
             </p>
         <h3>Project Results</h3>
     </section>
-    <!-- Project Steps - Videos -->
-    <section id="project-steps" class="results-section">
-        <h2>Project Steps</h2>
-        <div class="video-container">
-            <video id="project-step-1-video" autoplay loop muted controls width="50%" height="auto" poster="project_step_1_poster.jpg">
-                <source src="project_step_1_video.mp4" type="video/mp4">
-                <p>The code 1st converts a video into a audio file. Here is an example video used.
-                </p>
-                Your browser does not support the video tag.
-            </video>
-            <video id="project-step-2-video" autoplay loop muted controls width="50%" height="auto" poster="project_step_2_poster.jpg">
-                <source src="project_step_2_video.mp4" type="video/mp4">
-                <p>The code then converts a audio into text by 1st by splitting the audio into chucks of 30 words each max using the recognize_google tag.
-                </p><p>And then it uses OpenAI API to send a prompt along with the complete extracted text which is complied from the chunks, which is returned back in form of a output.</p>
-                Your browser does not support the video tag.
-            </video>
-            <video id="project-step-3-video" autoplay loop muted controls width="50%" height="auto" poster="project_step_3_poster.jpg">
-                <source src="projectresult2.mp4" type="video/mp4">
-                <p>The code finally outputs Minutes of Meeting as the prompt is specific to that. We can we an example output below:
-                </p>
-                Your browser does not support the video tag.
-            </video>
-            <div class="arrow prev-arrow" onclick="changeVideo('prev')">
-                <i class="fas fa-chevron-left"></i>
-            </div>
-            <div class="arrow next-arrow" onclick="changeVideo('next')">
-                <i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="step-arrow left" onclick="changeVideo('prev')">Step 1</div>
-            <div class="step-arrow right" onclick="changeVideo('next')">Step 2</div>
+<!-- Project Steps - Videos -->
+<section id="project-steps" class="results-section">
+    <h2>Project Steps</h2>
+    <div class="video-container">
+        <video id="project-step-1-video" autoplay loop muted controls width="50%" height="auto" poster="project_step_1_poster.jpg">
+            <source src="project_step_1_video.mp4" type="video/mp4">
+            <p>The code 1st converts a video into an audio file. Here is an example video used.</p>
+            Your browser does not support the video tag.
+        </video>
+        <div class="arrow prev-arrow" onclick="changeVideo('prev')">
+            <i class="fas fa-chevron-left"></i>
         </div>
-    </section>
+        <div class="arrow next-arrow" onclick="changeVideo('next')">
+            <i class="fas fa-chevron-right"></i>
+        </div>
+        <div class="step-arrow left" onclick="changeVideo('prev')">Step 1</div>
+        <div class="step-arrow right" onclick="changeVideo('next')">Step 2</div>
+    </div>
+
+    <video id="project-step-2-video" autoplay loop muted controls width="50%" height="auto" poster="project_step_2_poster.jpg">
+        <source src="project_step_2_video.mp4" type="video/mp4">
+        <p>The code then converts audio into text by splitting the audio into chunks of 30 words each using the recognize_google tag.</p>
+        <p>Then it uses OpenAI API to send a prompt along with the complete extracted text compiled from the chunks, which is returned back in the form of an output.</p>
+        Your browser does not support the video tag.
+    </video>
+    <div class="arrow prev-arrow" onclick="changeVideo('prev')">
+        <i class="fas fa-chevron-left"></i>
+    </div>
+    <div class="arrow next-arrow" onclick="changeVideo('next')">
+        <i class="fas fa-chevron-right"></i>
+    </div>
+    <div class="step-arrow left" onclick="changeVideo('prev')">Step 2</div>
+    <div class="step-arrow right" onclick="changeVideo('next')">Step 3</div>
+
+    <video id="project-step-3-video" autoplay loop muted controls width="50%" height="auto" poster="project_step_3_poster.jpg">
+        <source src="projectresult2.mp4" type="video/mp4">
+        <p>The code finally outputs Minutes of Meeting as the prompt is specific to that. We can see an example output below:</p>
+        Your browser does not support the video tag.
+    </video>
+    <div class="arrow prev-arrow" onclick="changeVideo('prev')">
+        <i class="fas fa-chevron-left"></i>
+    </div>
+    <!-- No need for a right arrow here as this is the last step -->
+    <div class="step-arrow left" onclick="changeVideo('prev')">Step 3</div>
+</section>
     <!-- JavaScript for video navigation -->
     <script>
         var currentStep = 1; // Current step index
