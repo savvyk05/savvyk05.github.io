@@ -166,8 +166,8 @@
             <p>Mobile: 551-227-5645</p>
             <p>Email: skhanna5@stevens.edu</p>
             <p>LinkedIn: <a href="https://www.linkedin.com/in/shashank-khanna/">Shashank Khanna</a></p>
-            <a href="#Projects"></a>
-
+            <a href="#projects"></a>
+            <button onclick="scrollToProjects()">View Projects</button>
         </section>
         <section id="skills">
             <h2>Top Skills</h2>
@@ -242,7 +242,12 @@
         </section>
     </div>
     <!-- Project Results - Video -->
-    <div id="Projects">These are my projects</div>
+    <div id="projects">These are my projects</div>
+        <script>
+        function scrollToProjects() {
+            document.getElementById('Projects').scrollIntoView({ behavior: 'smooth' });
+        }
+        </script>
     <section id="project-results" class="results-section">
         <h2>Project - Shape Shooter Game</h2>
             <p>Developed a Python-based arcade game utilizing Pygame library. Designed game mechanics, implemented player controls,
