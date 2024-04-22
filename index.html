@@ -84,14 +84,14 @@
             padding: 20px;
             width: 100%;
         }
-        .video-container {
+.video-container {
             position: relative;
             overflow: hidden;
             border-radius: 10px;
         }
 
         .video-container video {
-            width: 50%;
+            width: 50%; /* Reduced width */
             height: auto;
             transition: transform 0.5s ease-in-out;
         }
@@ -99,11 +99,9 @@
         .video-container .arrow {
             position: absolute;
             top: 50%;
-            transform: translateY(-50%);
             font-size: 24px;
             color: rgba(255, 255, 255, 0.8);
             cursor: pointer;
-            transition: color 0.3s, transform 0.3s;
             z-index: 1;
         }
 
@@ -128,7 +126,31 @@
         .video-container .next-arrow {
             right: 10px;
         }
-    </style>
+
+        .video-container .step-arrow {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 20px;
+            position: absolute;
+            bottom: 10px;
+            cursor: pointer;
+            transition: color 0.3s, transform 0.3s;
+        }
+
+        .video-container .step-arrow:hover {
+            color: rgba(255, 255, 255, 1);
+            animation: bounce 0.5s ease infinite alternate;
+        }
+
+        .video-container .step-arrow.left {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .video-container .step-arrow.right {
+            right: 50%;
+            transform: translateX(50%);
+        }
+</style>
 </head>
 <body>
     <header>
@@ -237,19 +259,19 @@
             </p>
         <h3>Project Results</h3>
     </section>
-<!-- Project Steps - Videos -->
+    <!-- Project Steps - Videos -->
     <section id="project-steps" class="results-section">
         <h2>Project Steps</h2>
         <div class="video-container">
-            <video id="project-step-1-video" autoplay loop muted controls poster="project_step_1_poster.jpg">
+            <video id="project-step-1-video" autoplay loop muted controls width="50%" height="auto" poster="project_step_1_poster.jpg">
                 <source src="project_step_1_video.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
-            <video id="project-step-2-video" autoplay loop muted controls poster="project_step_2_poster.jpg">
+            <video id="project-step-2-video" autoplay loop muted controls width="50%" height="auto" poster="project_step_2_poster.jpg">
                 <source src="project_step_2_video.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
-            <video id="project-step-3-video" autoplay loop muted controls poster="project_step_3_poster.jpg">
+            <video id="project-step-3-video" autoplay loop muted controls width="50%" height="auto" poster="project_step_3_poster.jpg">
                 <source src="project_step_3_video.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
@@ -259,6 +281,8 @@
             <div class="arrow next-arrow" onclick="changeVideo('next')">
                 <i class="fas fa-chevron-right"></i>
             </div>
+            <div class="step-arrow left" onclick="changeVideo('prev')">Step 1</div>
+            <div class="step-arrow right" onclick="changeVideo('next')">Step 2</div>
         </div>
     </section>
     <!-- JavaScript for video navigation -->
