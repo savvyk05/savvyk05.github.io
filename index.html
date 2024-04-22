@@ -73,6 +73,23 @@
             border-radius: 10px;
             box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
         }
+                /* Video container styles */
+        #project-video {
+            border-radius: 10px;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+
+        /* Center the video horizontally */
+        #project-video {
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* Add some padding */
+        #project-video {
+            padding: 20px;
+        }
     </style>
 </head>
 <body>
@@ -164,8 +181,8 @@
     <!-- Project Results - Video -->
     <section id="project-results" class="results-section">
         <h2>Project Results</h2>
-        <video controls width="640" height="360" poster="project_video_poster.jpg">
-            <source src="GameVideo.mp4" type="video/mp4">
+        <video id="project-video" autoplay loop muted controls width="100%" height="auto" poster="project_video_poster.jpg">
+            <source src="project_results_video.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
         <p>Description of the project results showcased in the video.</p>
