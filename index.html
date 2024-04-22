@@ -237,68 +237,49 @@
             </p>
         <h3>Project Results</h3>
     </section>
-    <!-- Project Step 1 - Video -->
-    <section id="project-step-1" class="results-section">
-        <h2>Project Step 1</h2>
+<!-- Project Steps - Videos -->
+    <section id="project-steps" class="results-section">
+        <h2>Project Steps</h2>
         <div class="video-container">
             <video id="project-step-1-video" autoplay loop muted controls poster="project_step_1_poster.jpg">
                 <source src="project_step_1_video.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
-            <div class="arrow prev-arrow" onclick="changeVideo('project-step-1', 'prev')">
-                <i class="fas fa-chevron-left"></i>
-            </div>
-            <div class="arrow next-arrow" onclick="changeVideo('project-step-1', 'next')">
-                <i class="fas fa-chevron-right"></i>
-            </div>
-        </div>
-        <!-- Description of the first step of the project -->
-    </section>
-    <!-- Project Step 2 - Video -->
-    <section id="project-step-2" class="results-section">
-        <h2>Project Step 2</h2>
-        <div class="video-container">
             <video id="project-step-2-video" autoplay loop muted controls poster="project_step_2_poster.jpg">
                 <source src="project_step_2_video.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
-            <div class="arrow prev-arrow" onclick="changeVideo('project-step-2', 'prev')">
-                <i class="fas fa-chevron-left"></i>
-            </div>
-            <div class="arrow next-arrow" onclick="changeVideo('project-step-2', 'next')">
-                <i class="fas fa-chevron-right"></i>
-            </div>
-        </div>
-        <!-- Description of the second step of the project -->
-    </section>
-    <!-- Project Step 3 - Video -->
-    <section id="project-step-3" class="results-section">
-        <h2>Project Step 3</h2>
-        <div class="video-container">
             <video id="project-step-3-video" autoplay loop muted controls poster="project_step_3_poster.jpg">
                 <source src="project_step_3_video.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
-            <div class="arrow prev-arrow" onclick="changeVideo('project-step-3', 'prev')">
+            <div class="arrow prev-arrow" onclick="changeVideo('prev')">
                 <i class="fas fa-chevron-left"></i>
             </div>
-            <div class="arrow next-arrow" onclick="changeVideo('project-step-3', 'next')">
+            <div class="arrow next-arrow" onclick="changeVideo('next')">
                 <i class="fas fa-chevron-right"></i>
             </div>
         </div>
-        <!-- Description of the third step of the project -->
     </section>
     <!-- JavaScript for video navigation -->
     <script>
-        function changeVideo(sectionId, direction) {
-            var video = document.getElementById(sectionId + '-video');
+        var currentStep = 1; // Current step index
+
+        function changeVideo(direction) {
+            var videos = document.querySelectorAll('.video-container video');
             if (direction === 'prev') {
-                // Change to previous video source
-                // Example code: Change source of the video element based on direction
+                currentStep = Math.max(currentStep - 1, 1); // Ensure current step is within bounds
             } else if (direction === 'next') {
-                // Change to next video source
-                // Example code: Change source of the video element based on direction
+                currentStep = Math.min(currentStep + 1, videos.length); // Ensure current step is within bounds
             }
+            // Hide all videos except the current step
+            videos.forEach(function(video, index) {
+                if (index + 1 === currentStep) {
+                    video.style.display = 'block';
+                } else {
+                    video.style.display = 'none';
+                }
+            });
         }
     </script>
     </section>
