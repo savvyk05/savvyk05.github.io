@@ -268,14 +268,20 @@
         <div class="video-container">
             <video id="project-step-1-video" autoplay loop muted controls width="50%" height="auto" poster="project_step_1_poster.jpg">
                 <source src="project_step_1_video.mp4" type="video/mp4">
+                <p>The code 1st converts a video into a audio file. Here is an example video used.
+                </p>
                 Your browser does not support the video tag.
             </video>
             <video id="project-step-2-video" autoplay loop muted controls width="50%" height="auto" poster="project_step_2_poster.jpg">
                 <source src="project_step_2_video.mp4" type="video/mp4">
+                <p>The code then converts a audio into text by 1st by splitting the audio into chucks of 30 words each max using the recognize_google tag.
+                </p><p>And then it uses OpenAI API to send a prompt along with the complete extracted text which is complied from the chunks, which is returned back in form of a output.</p>
                 Your browser does not support the video tag.
             </video>
-            <video id="project-step-3-video" autoplay loop muted controls width="50%" height="auto" poster="project_step_3_poster.jpg">
+            <video id="projectresult2.mp4" autoplay loop muted controls width="50%" height="auto" poster="project_step_3_poster.jpg">
                 <source src="project_step_3_video.mp4" type="video/mp4">
+                <p>The code finally outputs Minutes of Meeting as the prompt is specific to that. We can we an example output below:
+                </p>
                 Your browser does not support the video tag.
             </video>
             <div class="arrow prev-arrow" onclick="changeVideo('prev')">
