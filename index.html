@@ -155,10 +155,11 @@
                 /* Menu icon and box styles */
         .menu-icon {
             width: 40px;
-            position: absolute;
+            position: fixed; /* Change to fixed */
             top: 20px;
             left: 20px;
             cursor: pointer;
+            z-index: 999; /* Ensure it's above other elements */
         }
 
         .menu-box {
