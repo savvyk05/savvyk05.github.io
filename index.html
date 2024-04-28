@@ -404,6 +404,19 @@
 }
 
 
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        var menuIcon = document.querySelector('.menu-icon');
+        var menuBox = document.querySelector('.menu-box');
+
+        // Get the position of the menu icon
+        var iconRect = menuIcon.getBoundingClientRect();
+
+        // Update the position of the menu box
+        menuBox.style.top = iconRect.top + iconRect.height + 'px';
+        menuBox.style.left = iconRect.left + 'px';
+    }
 
     </script>
     </section>
