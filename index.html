@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shashank Khanna's Resume</title>
-    <link rel="icon" href="path/to/your/favicon.ico" type="image/x-icon">
+    <title>Shashank Khanna's Portfolio</title>
+    <link rel="icon" href="mainicon.png" type="image/x-icon">
     <style>
         /* Base styles */
         body {
@@ -13,6 +13,7 @@
             padding: 0;
             background-color: #f4f4f4;
         }
+
         /* Header styles */
         header {
             background-color: #333;
@@ -20,33 +21,166 @@
             padding: 20px;
             text-align: center;
         }
-        /* Menu icon styles */
-        .menu-icon {
-            width: 40px;
-            position: fixed;
-            top: 20px;
-            left: 20px;
-            cursor: pointer;
-            z-index: 999;
+
+        /* Main heading styles */
+        h1 {
+            margin: 10px 0;
         }
-        /* Menu box styles */
-        .menu-box {
-            width: 200px;
-            background: #333;
-            position: absolute;
-            top: 70px; /* Adjust as needed */
-            left: 20px; /* Adjust as needed */
-            display: none;
-            border-radius: 5px;
+
+        /* Section heading styles */
+        h2 {
+            margin: 20px 0 10px 0;
+            color: #333;
+        }
+
+        /* Subsection heading styles */
+        h3 {
+            margin: 15px 0 5px 0;
+            color: #555;
+        }
+
+        /* Section styles */
+        section {
+            background-color: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        /* List styles */
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        /* List item styles */
+        li {
+            margin-bottom: 5px;
+        }
+
+        /* Container styles */
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        /* Company logo styles */
+        .company-logo {
+            width: 100px;
+            height: auto;
+            margin-right: 20px;
+            border-radius: 10px;
             box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
-            z-index: 999;
         }
-        .menu-box.show {
+
+        /* Video container styles */
+        #project-video {
+            border-radius: 10px;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
             display: block;
+            margin: 0 auto;
+            padding: 20px;
+            width: 100%;
         }
+.video-container {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        .video-container video {
+            width: 50%; /* Reduced width */
+            height: auto;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .video-container .arrow {
+            position: absolute;
+            top: 50%;
+            font-size: 24px;
+            color: rgba(255, 255, 255, 0.8);
+            cursor: pointer;
+            z-index: 1;
+        }
+
+        .video-container .arrow:hover {
+            color: rgba(255, 255, 255, 1);
+            animation: bounce 0.5s ease infinite alternate;
+        }
+
+        @keyframes bounce {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(-5px);
+            }
+        }
+
+        .video-container .prev-arrow {
+            left: 10px;
+        }
+
+        .video-container .next-arrow {
+            right: 10px;
+        }
+
+        .video-container .step-arrow {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 20px;
+            position: absolute;
+            bottom: 10px;
+            cursor: pointer;
+            transition: color 0.3s, transform 0.3s;
+        }
+
+        .video-container .step-arrow:hover {
+            color: rgba(255, 255, 255, 1);
+            animation: bounce 0.5s ease infinite alternate;
+        }
+
+        .video-container .step-arrow.left {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .video-container .step-arrow.right {
+            right: 50%;
+            transform: translateX(50%);
+        }
+        html { scroll-behavior: smooth;}
+
+                /* Menu icon and box styles */
+        .menu-box {
+    width: 200px;
+    background: #333;
+    position: absolute; /* Change position to absolute */
+    z-index: 999; /* Ensure it's above other elements */
+    display: none; /* Initially hidden */
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.menu-icon {
+    width: 40px;
+    position: fixed; /* Keep position fixed */
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+    z-index: 999; /* Ensure it's above other elements */
+}
+
+        .menu-box.show {
+            display: block; /* Show menu box when toggled */
+        }
+
         .right-links {
             padding: 10px;
         }
+
         .right-links a {
             display: block;
             color: #fff;
@@ -54,11 +188,16 @@
             padding: 5px 0;
             text-align: center;
         }
+
         .right-links a:hover {
             background: rgba(255, 255, 255, 0.1);
             border-radius: 5px;
         }
-    </style>
+        .menu-icon img {
+            width: 30px; /* Adjust the width to your desired size */
+            height: auto; /* Maintain aspect ratio */
+        }
+</style>
 </head>
 <body>
     <header>
@@ -68,23 +207,7 @@
         <p>Jersey City, New Jersey, United States</p>
     </header>
 
-    <!-- Menu Icon -->
-    <div class="menu-icon" onclick="toggleMenu()">
-        <img src="menu.png" alt="Menu Icon">
-    </div>
-    <!-- Menu Box -->
-    <div class="menu-box" id="menu">
-        <div class="right-links">
-            <a href="#project-results">Projects</a>
-            <a href="#skills">Top Skills</a>
-            <a href="#certifications">Certifications</a>
-            <a href="#summary">Summary</a>
-            <a href="#experience">Experience</a>
-            <a href="#education">Education</a>
-        </div>
-    </div>
-
-<div class="container">
+    <div class="container">
         <section id="contact">
             <h2>Contact</h2>
             <p>Mobile: 551-227-5645</p>
@@ -254,12 +377,53 @@
     <!-- No need for a right arrow here as this is the last step -->
     <div class="step-arrow left" onclick="changeVideo('prev')">Step 3</div>
 </section>
-
+    <!-- JavaScript for video navigation -->
     <script>
+        var currentStep = 1; // Current step index
+
+        function changeVideo(direction) {
+            var videos = document.querySelectorAll('.video-container video');
+            if (direction === 'prev') {
+                currentStep = Math.max(currentStep - 1, 1); // Ensure current step is within bounds
+            } else if (direction === 'next') {
+                currentStep = Math.min(currentStep + 1, videos.length); // Ensure current step is within bounds
+            }
+            // Hide all videos except the current step
+            videos.forEach(function(video, index) {
+                if (index + 1 === currentStep) {
+                    video.style.display = 'block';
+                } else {
+                    video.style.display = 'none';
+                }
+            });
+        }
+
         function toggleMenu() {
-            var menu = document.getElementById('menu');
-            menu.classList.toggle('show');
+    var menu = document.getElementById('menu');
+    menu.classList.toggle('show'); // Toggle the 'show' class
+}
+
+
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        var menuIcon = document.querySelector('.menu-icon');
+        var menuBox = document.querySelector('.menu-box');
+
+        // Get the position of the menu icon
+        var iconRect = menuIcon.getBoundingClientRect();
+
+        // Update the position of the menu box
+        menuBox.style.top = iconRect.top + iconRect.height + 'px';
+        menuBox.style.left = iconRect.left + 'px';
+    }
+
+    </script>
+    </section>
+    <script>function scrollToProjects() {
+            document.getElementById('project-results').scrollIntoView({ behavior: 'smooth' });
         }
     </script>
+    <!-- Add more sections if needed -->
 </body>
 </html>
