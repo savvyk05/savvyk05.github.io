@@ -180,7 +180,7 @@ html {
         <div class="menu-icon" onclick="toggleMenu()">
             <img src="menu.png" alt="Menu Icon">
         </div>
-                <div class="home-icon">
+            <div class="home-icon" onclick="goHome()">
         <img src="home.png" alt="Home">
     </div>
         <!-- Menu Box -->
@@ -353,7 +353,10 @@ html {
     var menu = document.getElementById('menu');
     menu.classList.toggle('show'); // Toggle the 'show' class
 }
-
+function goHome() {
+    // Redirect to home page
+    window.location.href = "https://savvyk05.github.io/";
+}
 
     window.onscroll = function() {scrollFunction()};
 
@@ -382,10 +385,7 @@ videos.forEach(video => {
     // Mute the video
     video.muted = true;
 });
-function goHome() {
-    // Redirect to home page
-    window.location.href = "/";
-}
+
     </script>
     <!-- Add more sections if needed -->
 </body>
