@@ -6,152 +6,97 @@
     <title>Shashank Khanna's Portfolio</title>
     <link rel="icon" href="mainicon.png" type="image/x-icon">
     <style>
-        /* Base styles */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
+/* Base styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
 
-        /* Header styles */
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-        }
+/* Header styles */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
 
-        /* Main heading styles */
-        h1 {
-            margin: 10px 0;
-        }
+/* Heading styles */
+h1, h2, h3 {
+    margin: 10px 0;
+}
 
-        /* Section heading styles */
-        h2 {
-            margin: 20px 0 10px 0;
-            color: #333;
-        }
+h2 {
+    color: #333;
+}
 
-        /* Subsection heading styles */
-        h3 {
-            margin: 15px 0 5px 0;
-            color: #555;
-        }
+h3 {
+    color: #555;
+}
 
-        /* Section styles */
-        section {
-            background-color: #fff;
-            padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-        }
+/* Section styles */
+section {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
 
-        /* List styles */
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
+/* List styles */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
 
-        /* List item styles */
-        li {
-            margin-bottom: 5px;
-        }
+li {
+    margin-bottom: 5px;
+}
 
-        /* Container styles */
-        .container {
-            max-width: 800px;
-            margin: auto;
-            padding: 20px;
-        }
+/* Container styles */
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
 
-        /* Company logo styles */
-        .company-logo {
-            width: 100px;
-            height: auto;
-            margin-right: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
-        }
+/* Company logo styles */
+.company-logo {
+    width: 100px;
+    height: auto;
+    margin-right: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+}
 
-        /* Video container styles */
-        #project-video {
-            border-radius: 10px;
-            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
-            overflow: hidden;
-            display: block;
-            margin: 0 auto;
-            padding: 20px;
-            width: 100%;
-        }
+/* Video container styles */
+#project-video {
+    border-radius: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    display: block;
+    margin: 0 auto;
+    padding: 20px;
+    width: 100%;
+}
+
 .video-container {
-            position: relative;
-            overflow: hidden;
-            border-radius: 10px;
-        }
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
 
-        .video-container video {
-            width: 50%; /* Reduced width */
-            height: auto;
-            transition: transform 0.5s ease-in-out;
-        }
+.video-container video {
+    width: 50%; /* Reduced width */
+    height: auto;
+    transition: transform 0.5s ease-in-out;
+}
 
-        .video-container .arrow {
-            position: absolute;
-            top: 50%;
-            font-size: 24px;
-            color: rgba(255, 255, 255, 0.8);
-            cursor: pointer;
-            z-index: 1;
-        }
-
-        .video-container .arrow:hover {
-            color: rgba(255, 255, 255, 1);
-            animation: bounce 0.5s ease infinite alternate;
-        }
-
-        @keyframes bounce {
-            0% {
-                transform: translateY(0);
-            }
-            100% {
-                transform: translateY(-5px);
-            }
-        }
-
-        .video-container .prev-arrow {
-            left: 10px;
-        }
-
-        .video-container .next-arrow {
-            right: 10px;
-        }
-
-        .video-container .step-arrow {
-            color: rgba(255, 255, 255, 0.8);
-            font-size: 20px;
-            position: absolute;
-            bottom: 10px;
-            cursor: pointer;
-            transition: color 0.3s, transform 0.3s;
-        }
-
-        .video-container .step-arrow:hover {
-            color: rgba(255, 255, 255, 1);
-            animation: bounce 0.5s ease infinite alternate;
-        }
-
-        .video-container .step-arrow.left {
-            left: 50%;
-            transform: translateX(-50%);
-        }
-
-        .video-container .step-arrow.right {
-            right: 50%;
-            transform: translateX(50%);
-        }
-        html { scroll-behavior: smooth;}
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
 
                 /* Menu icon and box styles */
 .menu-box {
