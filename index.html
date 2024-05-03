@@ -104,20 +104,25 @@ html {
     background: #333;
     position: fixed;
     top: 70px;
-    left: 20px; /* Adjusted right position */
+    left: 20px; /* Adjusted left position */
     display: none;
     border-radius: 5px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
     z-index: 999;
 }
 
-.menu-icon {
-    width: 30px;
+.menu-icon, .home-icon {
+    width: 40px;
     position: fixed;
     top: 20px;
-    left: 20px; /* Adjusted right position */
+    left: 20px; /* Adjusted left position */
     cursor: pointer;
     z-index: 999;
+}
+
+.menu-icon img, .home-icon img {
+    width: 30px;
+    height: auto;
 }
 
 .menu-box.show {
@@ -139,11 +144,6 @@ html {
 .right-links a:hover {
     background: rgba(255, 255, 255, 0.1);
     border-radius: 5px;
-}
-
-.menu-icon img {
-    width: 30px;
-    height: auto;
 }
 
 
