@@ -25,11 +25,14 @@ header {
 /* Heading styles */
 h1, h2, h3 {
     margin: 10px 0;
-    color: #333; /* Make heading text color consistent */
+}
+
+h2 {
+    color: #333;
 }
 
 h3 {
-    color: #555; /* Make subheading text color consistent */
+    color: #555;
 }
 
 /* Section styles */
@@ -68,19 +71,27 @@ li {
 }
 
 /* Video container styles */
-#project-video, .video-container, .video-container video {
-    max-width: 800px; /* Make video container consistent */
+#project-video {
+    max-width: 800px
     border-radius: 10px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    display: block;
+    margin: auto;
+    padding: 20px;
+    width: 40%; /* Reduced width */;
 }
 
 .video-container {
+    max-width: 800px
     position: relative;
     overflow: hidden;
+    border-radius: 10px;
 }
 
 .video-container video {
-    width: 100%; /* Make video consistent */
+    max-width: 800px
+    width: 30%; /* Reduced width */
     height: auto;
     transition: transform 0.5s ease-in-out;
 }
@@ -91,30 +102,33 @@ html {
 }
 
 /* Menu icon and box styles */
-.menu-box, .menu-icon, .home-icon {
-    width: 40px; /* Make menu icon, home icon, and menu box consistent */
-    position: fixed;
-    top: 20px;
-    z-index: 999;
-}
-
 .menu-box {
-    width: 200px; /* Adjusted width */
+    width: 200px;
     background: #333;
-    right: 140px; /* Adjusted right position */
+    position: fixed;
+    top: 70px;
+    right: 140px; /* Adjusted left position */
     display: none;
     border-radius: 5px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+    z-index: 999;
 }
 
 .menu-icon {
-    right: 140px; /* Adjusted right position */
+    width: 40px;
+    position: fixed;
+    top: 20px;
+    right: 140px; /* Adjusted left position */
     cursor: pointer;
+    z-index: 999;
 }
-
 .home-icon {
-    right: 40px; /* Adjusted right position */
+    width: 40px;
+    position: fixed;
+    top: 20px;
+    right: 40px; /* Adjusted left position */
     cursor: pointer;
+    z-index: 999;
 }
 
 .menu-icon img, .home-icon img {
@@ -142,7 +156,6 @@ html {
     background: rgba(255, 255, 255, 0.1);
     border-radius: 5px;
 }
-
 
 
 </style>
