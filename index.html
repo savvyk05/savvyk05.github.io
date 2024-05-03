@@ -352,6 +352,15 @@ html {
     <script>function scrollToProjects() {
             document.getElementById('project-results').scrollIntoView({ behavior: 'smooth' });
         }
+        // Get all video elements on the page
+const videos = document.querySelectorAll('video');
+
+// Iterate over each video element
+videos.forEach(video => {
+    // Mute the video
+    video.muted = true;
+});
+
     </script>
     <!-- Add more sections if needed -->
 </body>
