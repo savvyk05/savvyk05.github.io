@@ -167,7 +167,76 @@ html {
         <p>Graduate Student Assistant at Stevens Institute of Technology | ExMphasis</p>
         <p>Jersey City, New Jersey, United States</p>
     </header>
+   <!-- Project Results - Video -->
+    <section id="project-results">
+        <h2>Project - Shape Shooter Game</h2>
+            <p>Developed a Python-based arcade game utilizing Pygame library. Designed game mechanics, implemented player controls,
+                and managed game entities. Incorporated features such as shooting arrows, avoiding obstacles, and tracking scores
+                and lives.</p>
+        <h3>Project Results</h3>
+        <video id="project-video" autoplay loop muted controls width="30%" height="50%" poster="project_video_poster.jpg">
+            <source src="project_results_video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <p>Description of the project results is showcased in the video.</p>
+    </section>
+        <section id="project3">
+    <div>
+        <h2>Project - Spotify Top Charts Data Analysis using Embedded Analytics with Tableau</h2>
+        <div class='tableauPlaceholder' id='viz1714711230006' style='position: relative'><noscript><a href='#'><img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;EM&#47;EM622Final&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='EM622Final&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;EM&#47;EM622Final&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1714711230006');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1700px';vizElement.style.height='877px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1700px';vizElement.style.height='877px';} else { vizElement.style.width='100%';vizElement.style.height='727px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+        <h3>Songs Attribute Compared between Genre while checking annual trends</h3>
+        <div class='tableauPlaceholder' id='viz1714768539031' style='position: relative'><noscript><a href='#'><img alt='Dashboard 2 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Sp&#47;SpotifySongDetailsDataAnalysis&#47;Dashboard2&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='SpotifySongDetailsDataAnalysis&#47;Dashboard2' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Sp&#47;SpotifySongDetailsDataAnalysis&#47;Dashboard2&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1714768539031');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1600px';vizElement.style.height='927px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1600px';vizElement.style.height='927px';} else { vizElement.style.width='100%';vizElement.style.height='2027px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+    </div>
+</section>
 
+    <section id="project-results2" class="results-section">
+        <h2>Project - Video To Text AI Assisted</h2>
+            <p>The code 1st converts a video into audio file and then it converts the audio into 30 chunks which are
+                then converted to text individually using recognize_google then the chunks are sent to OpenAI "model="gpt-3.5-turbo-instruct"
+                which gives us the results.
+            </p>
+        <h3>Project Results</h3>
+    </section>
+<section id="project-steps" class="results-section">
+    <video id="project-steps-video" autoplay loop muted controls width="50%" height="auto" poster="project_steps_poster.jpg">
+            <source src="project_steps_video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    <h4>STEP 1</h4>
+    <p>The code 1st converts a video into an audio file. Here is an example video used.</p>
+    <div class="video-container">
+        <video id="project-step-1-video" autoplay loop muted controls width="50%" height="auto" poster="project_step_1_poster.jpg">
+            <source src="project_step_1_video.mov" type="video/mp4">
+
+        </video>
+    <h4>STEP 2</h4>
+            <p>The code then converts audio into text by splitting the audio into chunks of 30 words each using the
+                recognize_google tag.</p>
+        <p>Then it uses OpenAI API to send a prompt along with the complete extracted text compiled from the chunks,
+            which is returned back in the form of an output.</p>
+<!--    <video id="project-step-2-video" autoplay loop muted controls width="50%" height="auto" poster="project_step_2_poster.jpg">-->
+<!--        <source src="project_step_2_video.mp4" type="video/mp4">-->
+
+<!--    </video>-->
+    <h4>STEP 3</h4>
+    <p>The code finally outputs Minutes of Meeting as the prompt is specific to that. We can see an example output below:</p>
+        <p>Minutes of Meeting</p>
+<p>Date: April 11, 20XX</p>
+<p>Time: 2:14 p.m.</p>
+<p>Location: Virtual Meeting</p>
+<p></p>
+<p>Participants:</p>
+<p>- Shashank Khanna</p>
+<p>- [Other participants' names]</p>
+<p></p>
+<p>The meeting was called to order at 2:14 p.m. by Shashank Khanna.</p>
+<p></p>
+<p>Shashank Khanna informed the group that he would like to test their ability to open a text removal of extraction from video. The current date and time were recorded as April 11, 20XX at 2:14 p.m. Shashank also introduced himself as the facilitator of the meeting.</p>
+<p></p>
+<p>There were no objections or additions to the agenda. The meeting was adjourned at [insert time] by Shashank Khanna.</p>
+<p></p>
+<p>Prepared by:</p>
+<p>[Your Name]</p></p>
     <div class="container">
         <section id="contact">
             <h2>Contact</h2>
@@ -269,76 +338,7 @@ html {
             <p>BTech - Bachelor of Technology, Electrical, Electronics and Communications Engineering · (2014 - 2018)</p>
         </section>
     </div>
-    <!-- Project Results - Video -->
-    <section id="project-results">
-        <h2>Project - Shape Shooter Game</h2>
-            <p>Developed a Python-based arcade game utilizing Pygame library. Designed game mechanics, implemented player controls,
-                and managed game entities. Incorporated features such as shooting arrows, avoiding obstacles, and tracking scores
-                and lives.</p>
-        <h3>Project Results</h3>
-        <video id="project-video" autoplay loop muted controls width="30%" height="50%" poster="project_video_poster.jpg">
-            <source src="project_results_video.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-        <p>Description of the project results is showcased in the video.</p>
-    </section>
-        <section id="project3">
-    <div>
-        <h2>Project - Spotify Top Charts Data Analysis using Embedded Analytics with Tableau</h2>
-        <div class='tableauPlaceholder' id='viz1714711230006' style='position: relative'><noscript><a href='#'><img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;EM&#47;EM622Final&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='EM622Final&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;EM&#47;EM622Final&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1714711230006');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1700px';vizElement.style.height='877px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1700px';vizElement.style.height='877px';} else { vizElement.style.width='100%';vizElement.style.height='727px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
-        <h3>Songs Attribute Compared between Genre while checking annual trends</h3>
-        <div class='tableauPlaceholder' id='viz1714768539031' style='position: relative'><noscript><a href='#'><img alt='Dashboard 2 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Sp&#47;SpotifySongDetailsDataAnalysis&#47;Dashboard2&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='SpotifySongDetailsDataAnalysis&#47;Dashboard2' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Sp&#47;SpotifySongDetailsDataAnalysis&#47;Dashboard2&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1714768539031');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1600px';vizElement.style.height='927px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1600px';vizElement.style.height='927px';} else { vizElement.style.width='100%';vizElement.style.height='2027px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
-    </div>
-</section>
 
-    <section id="project-results2" class="results-section">
-        <h2>Project - Video To Text AI Assisted</h2>
-            <p>The code 1st converts a video into audio file and then it converts the audio into 30 chunks which are
-                then converted to text individually using recognize_google then the chunks are sent to OpenAI "model="gpt-3.5-turbo-instruct"
-                which gives us the results.
-            </p>
-        <h3>Project Results</h3>
-    </section>
-<section id="project-steps" class="results-section">
-    <video id="project-steps-video" autoplay loop muted controls width="50%" height="auto" poster="project_steps_poster.jpg">
-            <source src="project_steps_video.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-    <h4>STEP 1</h4>
-    <p>The code 1st converts a video into an audio file. Here is an example video used.</p>
-    <div class="video-container">
-        <video id="project-step-1-video" autoplay loop muted controls width="50%" height="auto" poster="project_step_1_poster.jpg">
-            <source src="project_step_1_video.mov" type="video/mp4">
-
-        </video>
-    <h4>STEP 2</h4>
-            <p>The code then converts audio into text by splitting the audio into chunks of 30 words each using the
-                recognize_google tag.</p>
-        <p>Then it uses OpenAI API to send a prompt along with the complete extracted text compiled from the chunks,
-            which is returned back in the form of an output.</p>
-<!--    <video id="project-step-2-video" autoplay loop muted controls width="50%" height="auto" poster="project_step_2_poster.jpg">-->
-<!--        <source src="project_step_2_video.mp4" type="video/mp4">-->
-
-<!--    </video>-->
-    <h4>STEP 3</h4>
-    <p>The code finally outputs Minutes of Meeting as the prompt is specific to that. We can see an example output below:</p>
-        <p>Minutes of Meeting</p>
-<p>Date: April 11, 20XX</p>
-<p>Time: 2:14 p.m.</p>
-<p>Location: Virtual Meeting</p>
-<p></p>
-<p>Participants:</p>
-<p>- Shashank Khanna</p>
-<p>- [Other participants' names]</p>
-<p></p>
-<p>The meeting was called to order at 2:14 p.m. by Shashank Khanna.</p>
-<p></p>
-<p>Shashank Khanna informed the group that he would like to test their ability to open a text removal of extraction from video. The current date and time were recorded as April 11, 20XX at 2:14 p.m. Shashank also introduced himself as the facilitator of the meeting.</p>
-<p></p>
-<p>There were no objections or additions to the agenda. The meeting was adjourned at [insert time] by Shashank Khanna.</p>
-<p></p>
-<p>Prepared by:</p>
-<p>[Your Name]</p></p>
 <!--    <video id="project-step-3-video" autoplay loop muted controls width="50%" height="auto" poster="project_step_3_poster.jpg">-->
 <!--        <source src="projectresult2.mp4" type="video/mp4">-->
 
