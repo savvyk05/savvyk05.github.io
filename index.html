@@ -156,7 +156,20 @@ html {
     background: rgba(255, 255, 255, 0.1);
     border-radius: 5px;
 }
+    #project-videos {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px; /* Adds space between the two video sections */
+    }
 
+    .project-video {
+        width: 45%; /* Adjust the width of each video project */
+    }
+
+    video {
+        width: 100%; /* Ensure video takes up the full width of the container */
+        height: auto; /* Maintain aspect ratio */
+    }
 
 </style>
 </head>
@@ -174,28 +187,27 @@ html {
         <p><a href="https://www.councilonsustainabledevelopment.org/post/farm-to-table-empowering-farmers-enriching-tables-a-product-requirement-document" target="_blank">Read the full project research document</a></p>
     </section>
     <section id="project-videos">
-    <h2>Video Projects</h2>
-
     <!-- First Video Project -->
     <div class="project-video">
         <h3>Video Creation Project 1 - Influencer Campaign Highlights</h3>
-        <p>This project showcases a highlight from my influencer-driven campaigns that I directed and shot, focusing on increasing brand engagement and social media reach for ARLYN which is a brand of Bellevue Parfums.</p>
-        <video width="600" controls>
+        <p>This project showcases a highlight from my influencer-driven campaigns that I directed and shot, focusing on increasing brand engagement and social media reach for ARLYN, a brand of Bellevue Parfums.</p>
+        <video controls>
             <source src="export_1729551941169.MOV" type="video/mp4">
             Your browser does not support the video tag.
-            <p><a href="https://youtu.be/Hkr7YQtjLK0?si=H0Fcf8YIKZOBVrC7" target="_blank">CLick here to find the entire video!</a></p>
         </video>
+        <p><a href="https://youtu.be/Hkr7YQtjLK0?si=H0Fcf8YIKZOBVrC7" target="_blank">Click here to watch the entire video!</a></p>
     </div>
 
     <!-- Second Video Project -->
     <div class="project-video">
         <h3>Video Creation Project 2 - Social Media Content Creation for Beauty Products</h3>
-        <p>Here’s a sample of creative content I directed and shot, aimed at enhancing the visual appeal of beauty products for Jean Rish which is another brand of Bellevue Parfums for digital marketing strategies.</p>
-        <video width="600" controls>
+        <p>Here’s a sample of creative content I directed and shot, aimed at enhancing the visual appeal of beauty products for Jean Rish, another brand of Bellevue Parfums, for digital marketing strategies.</p>
+        <video controls>
             <source src="export_1729553183060.MOV" type="video/mp4">
             Your browser does not support the video tag.
         </video>
     </div>
+
 
 <!--    &lt;!&ndash; Third Video Project &ndash;&gt;-->
 <!--    <div class="project-video">-->
