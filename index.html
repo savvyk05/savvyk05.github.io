@@ -1,466 +1,337 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shashank Khanna's Portfolio</title>
-    <link rel="icon" href="mainicon.png" type="image/x-icon">
-    <style>
-/* Base styles */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Shashank Khanna | Financial and Data Analyst</title>
+<meta name="description" content="Shashank Khanna, AR Financial Analyst and data analyst. SQL, Power BI, Tableau, Python. PMP certified.">
+<link rel="icon" href="mainicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Source+Sans+3:wght@400;600&family=Source+Code+Pro:wght@500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#13233A; --paper:#FAFBFC; --panel:#FFFFFF; --rule:#D9DFE6;
+  --muted:#56657A; --accent:#1F7A6B; --accent-soft:#E3F1EE;
+  --head:"Sora",system-ui,sans-serif; --body:"Source Sans 3",system-ui,sans-serif;
+  --num:"Source Code Pro",ui-monospace,monospace;
+  color-scheme:light;
 }
-
-/* Header styles */
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
+@media (prefers-color-scheme:dark){
+  :root{--ink:#E6ECF3;--paper:#0F1826;--panel:#16223A;--rule:#2A3A52;--muted:#9AA8BA;--accent:#5CC2AE;--accent-soft:#18332F;color-scheme:dark;}
 }
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 1.0625rem/1.6 var(--body)}
+a{color:var(--accent)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
 
-/* Heading styles */
-h1, h2, h3 {
-    margin: 10px 0;
-}
+/* Nav */
+nav{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--paper) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--rule)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+nav .name{font:600 1rem var(--head);text-decoration:none;color:var(--ink)}
+nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0}
+nav ul a{color:var(--muted);text-decoration:none;font-weight:600;font-size:.95rem}
+nav ul a:hover{color:var(--ink)}
+@media (max-width:640px){nav ul{gap:14px}nav ul li:nth-child(n+4){display:none}}
 
-h2 {
-    color: #333;
-}
+/* Hero */
+.hero{padding:72px 0 56px;display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:start}
+.hero h1{font:700 clamp(2.4rem,5vw,3.6rem)/1.05 var(--head);margin:0 0 16px;letter-spacing:-.02em}
+.hero p.lede{font-size:1.2rem;color:var(--muted);max-width:34em;margin:0 0 24px}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-block;padding:10px 18px;border-radius:6px;font-weight:600;text-decoration:none;border:1px solid var(--ink);color:var(--ink)}
+.btn.primary{background:var(--ink);color:var(--paper)}
+.ledger{background:var(--panel);border:1px solid var(--rule);border-radius:8px;padding:20px 24px}
+.ledger h2{font:600 1rem var(--head);margin:0 0 8px}
+.ledger table{width:100%;border-collapse:collapse}
+.ledger td{padding:10px 0;border-top:1px solid var(--rule);vertical-align:baseline}
+.ledger td.n{font:500 1.15rem var(--num);text-align:right;color:var(--accent);white-space:nowrap;padding-left:16px}
+.ledger tr.total td{border-top:2px solid var(--ink);font-weight:600}
+@media (max-width:820px){.hero{grid-template-columns:1fr;padding-top:48px}}
 
-h3 {
-    color: #555;
-}
+/* Sections */
+section{padding:56px 0;border-top:1px solid var(--rule)}
+section h2.title{font:700 1.75rem/1.2 var(--head);margin:0 0 28px;letter-spacing:-.01em}
 
-/* Section styles */
-section {
-    background-color: #fff;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-}
+/* Timeline */
+.job{display:grid;grid-template-columns:180px 1fr;gap:24px;padding:22px 0;border-top:1px solid var(--rule)}
+.job:first-of-type{border-top:0;padding-top:0}
+.when{font:500 .9rem var(--num);color:var(--muted)}
+.job h3{font:600 1.15rem var(--head);margin:0}
+.job .org{color:var(--muted);margin:2px 0 10px}
+.job ul{margin:0;padding-left:1.1em;max-width:68ch}
+.job li{margin-bottom:6px}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.tags span{background:var(--accent-soft);color:var(--accent);font-size:.85rem;font-weight:600;padding:2px 10px;border-radius:999px}
+@media (max-width:640px){.job{grid-template-columns:1fr;gap:4px}}
 
-/* List styles */
-ul {
-    list-style-type: none;
-    padding: 0;
-}
+/* Skills */
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:28px}
+.skills h3{font:600 1rem var(--head);margin:0 0 8px}
+.skills p{margin:0;color:var(--muted)}
 
-li {
-    margin-bottom: 5px;
-}
+/* Projects */
+.proj{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center;padding:28px 0;border-top:1px solid var(--rule)}
+.proj:first-of-type{border-top:0;padding-top:0}
+.proj h3{font:600 1.25rem var(--head);margin:0 0 8px}
+.proj p{margin:0 0 10px;max-width:60ch}
+.media{border-radius:8px;overflow:hidden;background:var(--panel);border:1px solid var(--rule)}
+.media video,.media img{display:block;width:100%;height:auto;max-height:420px;object-fit:contain;background:#000}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.tableau{grid-column:1/-1;overflow-x:auto}
+@media (max-width:820px){.proj{grid-template-columns:1fr}}
+details{margin-top:8px}
+summary{cursor:pointer;font-weight:600;color:var(--accent)}
+details pre{white-space:pre-wrap;font:400 .9rem/1.5 var(--num);background:var(--panel);border:1px solid var(--rule);border-radius:6px;padding:14px;margin-top:10px}
 
-/* Container styles */
-.container {
-    max-width: 600px;
-    margin: auto;
-    padding: 20px;
-}
+/* Education */
+.edu{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:28px}
+.edu h3{font:600 1.05rem var(--head);margin:0}
+.edu p{margin:4px 0 0;color:var(--muted)}
 
-/* Company logo styles */
-.company-logo {
-    width: 100px;
-    height: auto;
-    margin-right: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-/* Video container styles */
-#project-video {
-    max-width: 800px
-    border-radius: 10px;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
-    overflow: hidden;
-    display: block;
-    margin: auto;
-    padding: 20px;
-    width: 45%; /* Reduced width */;
-}
-
-.video-container {
-    max-width: 800px
-    position: relative;
-    overflow: hidden;
-    border-radius: 10px;
-}
-
-.video-container video {
-    max-width: 800px
-    width: 30%; /* Reduced width */
-    height: auto;
-    transition: transform 0.5s ease-in-out;
-}
-
-/* Smooth scrolling */
-html {
-    scroll-behavior: smooth;
-}
-
-/* Menu icon and box styles */
-.menu-box {
-    width: 200px;
-    background: #333;
-    position: fixed;
-    top: 70px;
-    right: 140px; /* Adjusted left position */
-    display: none;
-    border-radius: 5px;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
-    z-index: 999;
-}
-
-.menu-icon {
-    width: 40px;
-    position: fixed;
-    top: 20px;
-    right: 140px; /* Adjusted left position */
-    cursor: pointer;
-    z-index: 999;
-}
-.home-icon {
-    width: 40px;
-    position: fixed;
-    top: 20px;
-    right: 40px; /* Adjusted left position */
-    cursor: pointer;
-    z-index: 999;
-}
-
-.menu-icon img, .home-icon img {
-    width: 30px;
-    height: auto;
-}
-
-.menu-box.show {
-    display: block;
-}
-
-.right-links {
-    padding: 10px;
-}
-
-.right-links a {
-    display: block;
-    color: #fff;
-    text-decoration: none;
-    padding: 5px 0;
-    text-align: center;
-}
-
-.right-links a:hover {
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 5px;
-}
-    #project-videos {
-        display: flex;
-        justify-content: space-between;
-        gap: 20px; /* Adds space between the two video sections */
-    }
-
-    .project-video {
-        width: 45%; /* Adjust the width of each video project */
-    }
-
-    video {
-        width: 50%; /* Ensure video takes up the full width of the container */
-        height: auto; /* Maintain aspect ratio */
-    }
-
+footer{border-top:1px solid var(--rule);padding:40px 0 56px}
+footer h2{font:700 1.5rem var(--head);margin:0 0 8px}
+footer p{color:var(--muted);margin:0 0 18px}
 </style>
 </head>
 <body>
-    <header>
-        <h1>Shashank Khanna</h1>
-        <p>Business Intelligence Specialist | Data-driven Decision Maker</p>
-        <p>Project Manager - E-Commerce Growth at Bellevue Parfums | Recent Masters in Engineering Management Graduate from Stevens Institute of Technology</p>
-        <p>Jersey City, New Jersey, United States</p>
-    </header>
-    <!-- Project Research Document -->
-    <section id="project-research">
-        <h2>Project Research - Farm-to-Table Platform</h2>
-        <p>The Farm-to-Table Platform is a groundbreaking initiative designed to revolutionize the agricultural and food distribution landscape in India. With a comprehensive approach aimed at addressing the challenges faced by farmers and enhancing food quality for consumers, the platform offers a holistic solution to bridge the gap between producers and consumers.</p>
-        <p><a href="https://www.councilonsustainabledevelopment.org/post/farm-to-table-empowering-farmers-enriching-tables-a-product-requirement-document" target="_blank">Read the full project research document</a></p>
-    </section>
-    <section id="project-videos">
-    <!-- First Video Project -->
-    <div class="project-video">
-        <h3>Video Creation Project 1 - Influencer Campaign Highlights</h3>
-        <p>This project showcases a highlight from my influencer-driven campaigns that I directed and shot, focusing on increasing brand engagement and social media reach for ARLYN, a brand of Bellevue Parfums.</p>
-        <video controls>
-            <source src="export_1729551941169.MOV" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-        <p><a href="https://youtu.be/Hkr7YQtjLK0?si=H0Fcf8YIKZOBVrC7" target="_blank">Click here to watch the entire video!</a></p>
-    </div>
 
-    <!-- Second Video Project -->
-    <div class="project-video">
-        <h3>Video Creation Project 2 - Social Media Content Creation for Beauty Products</h3>
-        <p>Here’s a sample of creative content I directed and shot, aimed at enhancing the visual appeal of beauty products for Jean Rish, another brand of Bellevue Parfums, for digital marketing strategies.</p>
-        <video controls>
-            <source src="export_1729553183060.MOV" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-    </div>
+<nav aria-label="Main">
+  <div class="wrap">
+    <a class="name" href="#top">Shashank Khanna</a>
+    <ul>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
 
+<main id="top">
+<div class="wrap">
 
-<!--    &lt;!&ndash; Third Video Project &ndash;&gt;-->
-<!--    <div class="project-video">-->
-<!--        <h3>Project 3 - Product Launch Campaign Video</h3>-->
-<!--        <p>A product launch video I directed and filmed, designed to showcase the unique selling points of a new product line for Bellevue Parfums.</p>-->
-<!--        <video width="600" controls>-->
-<!--            <source src="path-to-your-video3.mp4" type="video/mp4">-->
-<!--            Your browser does not support the video tag.-->
-<!--        </video>-->
-<!--    </div>-->
-
-    <!-- Add more video projects as needed -->
-</section>
-
-   <!-- Project Results - Video -->
-    <section id="project-results">
-        <h2>Project - Shape Shooter Game</h2>
-            <p>Developed a Python-based arcade game utilizing Pygame library. Designed game mechanics, implemented player controls,
-                and managed game entities. Incorporated features such as shooting arrows, avoiding obstacles, and tracking scores
-                and lives.</p>
-        <h3>Project Results</h3>
-        <video id="project-video" autoplay loop muted controls width="30%" height="50%" poster="project_video_poster.jpg">
-            <source src="project_results_video.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-        <p>Description of the project results is showcased in the video.</p>
-    </section>
-        <section id="project3">
+  <header class="hero">
     <div>
-        <h2>Project - Spotify Top Charts Data Analysis using Embedded Analytics with Tableau</h2>
-        <div class='tableauPlaceholder' id='viz1714711230006' style='position: relative'><noscript><a href='#'><img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;EM&#47;EM622Final&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='EM622Final&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;EM&#47;EM622Final&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1714711230006');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1700px';vizElement.style.height='877px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1700px';vizElement.style.height='877px';} else { vizElement.style.width='100%';vizElement.style.height='727px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
-        <h3>Songs Attribute Compared between Genre while checking annual trends</h3>
-        <div class='tableauPlaceholder' id='viz1714768539031' style='position: relative'><noscript><a href='#'><img alt='Dashboard 2 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Sp&#47;SpotifySongDetailsDataAnalysis&#47;Dashboard2&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='SpotifySongDetailsDataAnalysis&#47;Dashboard2' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Sp&#47;SpotifySongDetailsDataAnalysis&#47;Dashboard2&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1714768539031');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1600px';vizElement.style.height='927px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1600px';vizElement.style.height='927px';} else { vizElement.style.width='100%';vizElement.style.height='2027px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+      <h1>Shashank Khanna</h1>
+      <p class="lede">Financial and data analyst who turns messy receivables, billing and operations data into recovered revenue and clear decisions. SQL, Power BI, Tableau and Python, backed by a software engineering foundation and PMP certification.</p>
+      <div class="cta">
+        <a class="btn primary" href="#contact">Get in touch</a>
+        <a class="btn" href="https://www.linkedin.com/in/shashank-khanna/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+      <p style="color:var(--muted);margin-top:18px">New York, NY. Open to relocation.</p>
     </div>
-</section>
+    <aside class="ledger" aria-label="Selected results">
+      <h2>Selected results</h2>
+      <table>
+        <tr><td>AR portfolio managed across 142+ accounts</td><td class="n">$7M+</td></tr>
+        <tr><td>Recovered from accounts written off as lost</td><td class="n">$3.7M</td></tr>
+        <tr><td>Single distressed account settlement</td><td class="n">$100K</td></tr>
+        <tr><td>Service tickets resolved at Mphasis</td><td class="n">6,000+</td></tr>
+        <tr class="total"><td>Collected before quarter end, FY26</td><td class="n">$4.2M</td></tr>
+      </table>
+    </aside>
+  </header>
 
-    <section id="project-results2" class="results-section">
-        <h2>Project - Video To Text AI Assisted</h2>
-            <p>The code 1st converts a video into audio file and then it converts the audio into 30 chunks which are
-                then converted to text individually using recognize_google then the chunks are sent to OpenAI "model="gpt-3.5-turbo-instruct"
-                which gives us the results.
-            </p>
-        <h3>Project Results</h3>
-    </section>
-<section id="project-steps" class="results-section">
-    <video id="project-steps-video" autoplay loop muted controls width="50%" height="auto" poster="project_steps_poster.jpg">
-            <source src="project_steps_video.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-    <h4>STEP 1</h4>
-    <p>The code 1st converts a video into an audio file. Here is an example video used.</p>
-    <div class="video-container">
-        <video id="project-step-1-video" autoplay loop muted controls width="50%" height="auto" poster="project_step_1_poster.jpg">
-            <source src="project_step_1_video.mov" type="video/mp4">
+  <section id="experience">
+    <h2 class="title">Experience</h2>
 
-        </video>
-    <h4>STEP 2</h4>
-            <p>The code then converts audio into text by splitting the audio into chunks of 30 words each using the
-                recognize_google tag.</p>
-        <p>Then it uses OpenAI API to send a prompt along with the complete extracted text compiled from the chunks,
-            which is returned back in the form of an output.</p>
-<!--    <video id="project-step-2-video" autoplay loop muted controls width="50%" height="auto" poster="project_step_2_poster.jpg">-->
-<!--        <source src="project_step_2_video.mp4" type="video/mp4">-->
+    <article class="job">
+      <div class="when">Oct 2025 to Sep 2026</div>
+      <div>
+        <h3>AR Financial Analyst</h3>
+        <p class="org">Broadridge Financial Solutions, New York</p>
+        <ul>
+          <li>Managed a $7M+ accounts receivable portfolio of more than 142 accounts, collecting $4.2M before quarter end.</li>
+          <li>Recovered $3.7M from about 70 disputed accounts previously considered lost, through new contact research, payment plan negotiation and credit holds; negotiated a $100K settlement on a distressed account.</li>
+          <li>Extended the team Power BI aging dashboard with unpaid reason codes and payment plan tracking, feeding monthly bad debt and write off reviews with the Global Controller.</li>
+          <li>Automated Proxy Plus billing reconciliation with Excel macros, cutting each reconciliation roughly in half; identified 10+ CPI pricing discrepancies a month on undercharged contracts.</li>
+          <li>Wrote the collections SOP and quality checklist that gates escalation to the dispute team, and trained collectors on it.</li>
+        </ul>
+        <div class="tags"><span>Power BI</span><span>HighRadius</span><span>Oracle GL</span><span>Salesforce</span><span>Coupa</span><span>Excel VBA</span><span>SEC filings</span></div>
+      </div>
+    </article>
 
-<!--    </video>-->
-    <h4>STEP 3</h4>
-    <p>The code finally outputs Minutes of Meeting as the prompt is specific to that. We can see an example output below:</p>
-        <p>Minutes of Meeting</p>
-<p>Date: April 11, 20XX</p>
-<p>Time: 2:14 p.m.</p>
-<p>Location: Virtual Meeting</p>
-<p></p>
-<p>Participants:</p>
-<p>- Shashank Khanna</p>
-<p>- [Other participants' names]</p>
-<p></p>
-<p>The meeting was called to order at 2:14 p.m. by Shashank Khanna.</p>
-<p></p>
-<p>Shashank Khanna informed the group that he would like to test their ability to open a text removal of extraction from video. The current date and time were recorded as April 11, 20XX at 2:14 p.m. Shashank also introduced himself as the facilitator of the meeting.</p>
-<p></p>
-<p>There were no objections or additions to the agenda. The meeting was adjourned at [insert time] by Shashank Khanna.</p>
-<p></p>
-<p>Prepared by:</p>
-<p>[Your Name]</p></p>
-<!--    <div class="container">-->
-<!--        <section id="contact">-->
-<!--            <h2>Contact</h2>-->
-<!--            <p>Mobile: 551-227-5645</p>-->
-<!--            <p>Email: skhanna5@stevens.edu</p>-->
-<!--            <p>LinkedIn: <a href="https://www.linkedin.com/in/shashank-khanna/">Shashank Khanna</a></p>-->
-<!--        </section>-->
-<!--        <section id="menu_about">-->
-<!--        &lt;!&ndash; Menu Icon &ndash;&gt;-->
-<!--        <div class="menu-icon" onclick="toggleMenu()">-->
-<!--            <img src="menu.png" alt="Menu Icon">-->
-<!--        </div>-->
-<!--            <div class="home-icon" onclick="goHome()">-->
-<!--        <img src="home.png" alt="Home">-->
-<!--    </div>-->
-<!--        &lt;!&ndash; Menu Box &ndash;&gt;-->
-<!--        <div class="menu-box" id="menu">-->
-<!--            <div class="right-links">-->
-<!--                <a href="#project-results">Projects</a>-->
-<!--                <a href="#skills">Top Skills</a>-->
-<!--                <a href="#certifications">Certifications</a>-->
-<!--                <a href="#summary">Summary</a>-->
-<!--                <a href="#experience">Experience</a>-->
-<!--                <a href="#education">Education</a>-->
-<!--                &lt;!&ndash; Add more menu links as needed &ndash;&gt;-->
-<!--            </div>-->
-<!--        </div>-->
-<!--        </section>-->
-<!--        <section id="skills">-->
-<!--            <h2>Top Skills</h2>-->
-<!--            <ul>-->
-<!--                <li>Technical: Python, SQL, Tableau</li>-->
-<!--                <li>Tools: Agile Project Management, MS Excel</li>-->
-<!--                <li>Concepts: Decision-Making, Risk Management, Applied AI, Predictive Modeling & Forecasting</li>-->
-<!--            </ul>-->
-<!--        </section>-->
-<!--        <section id="certifications">-->
-<!--            <h2>Certifications</h2>-->
-<!--            <ul>-->
-<!--                <li>Data Exploration and Visualization for Risk and Decision Making - Graduate Certificate Program</li>-->
-<!--                <li>Agile Project Management with Microsoft Project</li>-->
-<!--                <li>Lean Six Sigma Foundations</li>-->
-<!--            </ul>-->
-<!--        </section>-->
-<!--        <section id="summary">-->
-<!--            <h2>Summary</h2>-->
-<!--            <img src="your-photo.jpg" alt="Your Photo" class="company-logo">-->
-<!--            <p>With a background in software engineering and data analysis, I am pursuing a Master of Engineering in Engineering/Industrial Management at Stevens Institute of Technology, where I am learning the fundamentals of business strategy, project management, and innovation. My goal is to become a technology leader who can bridge the gap between technical and business aspects of complex problems.</p>-->
-<!--            <p>I am also an Impact Fellow at Global Governance Initiative, a global initiative that upskills individuals in various domains such as product management, management consulting, and impact investment, by engaging with industry professionals and practitioners. Through this program, I am developing critical problem-solving skills and gaining hands-on experience in tackling real-world challenges. Additionally, I am passionate about exploring emerging fields such as wearable technology, generative AI, and data analytics, and applying them to create innovative solutions. As the Secretary of the Business Intelligence and Analytics Club at Stevens, I collaborate with peers to organize events and activities that foster learning and networking opportunities. I am excited about the possibilities that lie ahead and am committed to making a meaningful impact in the ever-evolving landscape of technology.</p>-->
-<!--        </section>-->
-<!--        <section id="experience">-->
-<!--            <h2>Experience</h2>-->
-<!--            <img src="company-logo1.jpg" alt="Company Logo 1" class="company-logo">-->
-<!--            <h3>Global Governance Initiative</h3>-->
-<!--            <p>Impact Fellow</p>-->
-<!--            <p>February 2024 - Present (3 months)</p>-->
-<!--            <p>Among the top 5% of 15000+ applicants who are selected for the Global Governance Initiative Impact Fellowship program.</p>-->
-<!--            <p>A 6-month global initiative that aims to upskill individuals in various domains like product management, management consulting, and impact investment, by engaging with industry professionals and practitioners.</p>-->
-<!--            <p>Greater bent towards learning by doing and cultivation of critical problem-solving skills.</p>-->
-<!--            <img src="stevens-logo.jpg" alt="Company Logo 2" class="company-logo">-->
-<!--            <h3>Stevens Institute of Technology</h3>-->
-<!--            <p>Graduate Student Assistant</p>-->
-<!--            <p>September 2023 - Present (8 months)</p>-->
-<!--            <p>Hoboken, New Jersey, United States</p>-->
-<!--            <p>Working with the Development and Alumni Engagement Department with the following duties:</p>-->
-<!--            <ul>-->
-<!--                <li>Executes grant application management by organizing materials for faculty researchers and grant writers to draft five-and-six-figure proposals for scientific research and programs for underserved students, and prepare for submission.</li>-->
-<!--                <li>Undertaking a materials management project, archiving 75+ year-old university and external documents for historical preservation and compliance with records management.</li>-->
-<!--                <li>Responsible for contributing and managing proprietary lead and customer data in the university’s customer relations management software for department effectiveness.</li>-->
-<!--            </ul>-->
+    <article class="job">
+      <div class="when">2024 to 2025</div>
+      <div>
+        <h3>Project Manager, E-Commerce Growth</h3>
+        <p class="org">Bellevue Parfums USA, New York</p>
+        <ul>
+          <li>Built marketplace revenue from zero to about $20K across Amazon, Walmart and the brand site.</li>
+          <li>Negotiated bulk wholesale pricing with TJ Maxx and Marshalls, raising the offer from $10 to $15 per unit on a 50,000+ unit annual commitment.</li>
+          <li>Ran two campaigns on a combined $5K budget: 50+ influencers and 500K+ TikTok views, plus organic growth to 6,000 and 4,700 followers for two brands.</li>
+          <li>Moved the company from Zoho to Salesforce, building product catalogs and quotes; liaised between the offshore web team and the CMO and President.</li>
+        </ul>
+        <div class="tags"><span>Salesforce</span><span>Google Analytics</span><span>Looker Studio</span><span>QuickBooks</span></div>
+      </div>
+    </article>
 
-<!--            <img src="tresi-logo.jpg" alt="Tresi LLC." class="company-logo">-->
-<!--            <h3>Supply Chain/ Business Operations Intern</h3>-->
-<!--            <p>Tresi LLC., New York, NY, USA</p>-->
-<!--            <p>06/2023 – 08/2023</p>-->
-<!--            <ul>-->
-<!--                <li>Utilized Tableau and Salesforce for a 55% efficiency boost and enhanced KPI tracking. Reduced order issues by 40% through data-driven operational monitoring. Raised $50,000 via diverse fundraising efforts demonstrating adept networking skills.</li>-->
-<!--                <li>Managed a team of 7 logistics professionals and 5 operational staff, implementing strategic planning to optimize workflow.</li>-->
-<!--            </ul>-->
+    <article class="job">
+      <div class="when">Sep 2023 to May 2024</div>
+      <div>
+        <h3>Graduate Assistant, Data Analytics</h3>
+        <p class="org">Stevens Institute of Technology, Hoboken</p>
+        <ul>
+          <li>Segmented and visualized 5,000+ donor records, contributing to a 15% increase in donations over the prior two years.</li>
+          <li>Supported donor engagement connected to the PSEG Foundation's $1.45M award for the Stevens Center for Sustainability, plus grant research and reporting.</li>
+        </ul>
+        <div class="tags"><span>Salesforce</span><span>Excel</span><span>PowerPoint</span></div>
+      </div>
+    </article>
 
-<!--            <img src="mphasis-logo.jpg" alt="Mphasis Ltd." class="company-logo">-->
-<!--            <h3>Delivery Senior Software Engineer</h3>-->
-<!--            <p>Mphasis Ltd., Mumbai, India</p>-->
-<!--            <p>07/2018 – 07/2022</p>-->
-<!--            <ul>-->
-<!--                <li>Led strategic data analytics initiatives within supply chain ERP operations as part of the FedEx Critical Inventory Logistics Team, advising critical decision-making processes and ensuring project security. Travelled overseas for collaborative meetings.</li>-->
-<!--                <li>Engineered innovative solutions to enhance the inventory system efficiency, resolving over 5000 support tickets through advanced SQL queries. Developed pricing strategies and created multiple reports for internal audit purposes.</li>-->
-<!--                <li>Part of multiple dynamic teams to execute data quality improvements, and perform financial analysis by strategically assigning roles based on detailed individual strengths, resulting in a 40% reduction in software bugs and project delivery times.</li>-->
-<!--                <li>Leveraged advanced SQL techniques for data analysis and optimization, architecting a 35% increase in project efficiency and code quality, showcasing not just technical proficiency but also a visionary approach to problem-solving and interface design.</li>-->
-<!--            </ul>-->
-<!--        </section>-->
-<!--        <section id="education">-->
-<!--            <h2>Education</h2>-->
-<!--            <img src="stevens-logo.jpg" alt="Stevens Logo" class="company-logo">-->
-<!--            <h3>Stevens Institute of Technology</h3>-->
-<!--            <p>Master of Engineering - MEng, Engineering/Industrial Management · (September 2022 - May 2024)</p>-->
-<!--            <img src="manipal.png" alt="Manipal Logo" class="company-logo">-->
-<!--            <h3>Manipal Institute of Technology</h3>-->
-<!--            <p>BTech - Bachelor of Technology, Electrical, Electronics and Communications Engineering · (2014 - 2018)</p>-->
-<!--        </section>-->
-<!--    </div>-->
+    <article class="job">
+      <div class="when">Jun 2023 to Aug 2023</div>
+      <div>
+        <h3>Business Operations Intern</h3>
+        <p class="org">Tresi LLC, New York</p>
+        <ul>
+          <li>Built a Python integration with the Shopify REST Admin API feeding weekly Tableau dashboards on revenue, repeat customers and best sellers across about 200 items in 7 categories.</li>
+          <li>Used segmentation to steer stocking and ads toward sofas and restaurant owners; order volume grew 200% by month two.</li>
+          <li>Ran the warehouse and delivery schedule, connecting Shipday for route planning and live customer updates.</li>
+        </ul>
+        <div class="tags"><span>Tableau</span><span>SQL</span><span>Python</span><span>Shopify API</span></div>
+      </div>
+    </article>
 
-<!--    <video id="project-step-3-video" autoplay loop muted controls width="50%" height="auto" poster="project_step_3_poster.jpg">-->
-<!--        <source src="projectresult2.mp4" type="video/mp4">-->
+    <article class="job">
+      <div class="when">Jul 2020 to Jul 2022</div>
+      <div>
+        <h3>Product Manager, Digital Marketing (part time)</h3>
+        <p class="org">Maharani Apparels, India</p>
+        <ul>
+          <li>Launched the brand's first online store and grew monthly online sales from $0 to about $3K.</li>
+          <li>Set pricing from competitor analysis and grew Instagram from 0 to 4K followers, averaging 30K views per post.</li>
+        </ul>
+        <div class="tags"><span>Google Ads</span><span>Meta Ads</span><span>E-commerce</span></div>
+      </div>
+    </article>
 
+    <article class="job">
+      <div class="when">Jul 2018 to Jul 2022</div>
+      <div>
+        <h3>Delivery Senior Software Engineer</h3>
+        <p class="org">Mphasis Ltd., Mumbai</p>
+        <ul>
+          <li>FedEx Critical Inventory Logistics: wrote PL/SQL triggers and procedures for high volume stock movements in the O2S order system and kept urgent orders shipping same day.</li>
+          <li>DJO Global: led an 8 month email migration of 7,000+ accounts, plus ETL validation, data reconciliation and about 30 Oracle access requests a month.</li>
+          <li>Axis Bank AgriLOS: supported an agricultural loan origination platform for 18 months, including data fixes and audit reporting.</li>
+          <li>Resolved 6,000+ tickets and mentored two engineers.</li>
+        </ul>
+        <div class="tags"><span>PL/SQL</span><span>Oracle</span><span>SAP</span><span>ServiceNow</span><span>Java</span></div>
+      </div>
+    </article>
+  </section>
 
-<!--    </video>-->
+  <section id="skills">
+    <h2 class="title">Skills</h2>
+    <div class="skills">
+      <div><h3>Data and BI</h3><p>SQL, PL/SQL, Power BI, Tableau, Python (pandas, NumPy, scikit-learn), R, Excel VBA, PowerPivot, Alteryx</p></div>
+      <div><h3>Finance and AR</h3><p>Collections, dispute resolution, cash application, reconciliation, bad debt reserves, forecasting, SEC filing analysis</p></div>
+      <div><h3>Systems</h3><p>Oracle GL, Salesforce, HighRadius, Coupa, SAP, Proxy Plus, QuickBooks, SharePoint, Smartsheet</p></div>
+      <div><h3>Delivery</h3><p>PMP, Agile and Scrum, Lean Six Sigma, SOPs and training, stakeholder reporting</p></div>
     </div>
-</section>
+  </section>
 
-    <!-- JavaScript for video navigation -->
-    <script>
-        var currentStep = 1; // Current step index
+  <section id="projects">
+    <h2 class="title">Projects</h2>
 
-        function changeVideo(direction) {
-            var videos = document.querySelectorAll('.video-container video');
-            if (direction === 'prev') {
-                currentStep = Math.max(currentStep - 1, 1); // Ensure current step is within bounds
-            } else if (direction === 'next') {
-                currentStep = Math.min(currentStep + 1, videos.length); // Ensure current step is within bounds
-            }
-            // Hide all videos except the current step
-            videos.forEach(function(video, index) {
-                if (index + 1 === currentStep) {
-                    video.style.display = 'block';
-                } else {
-                    video.style.display = 'none';
-                }
-            });
-        }
+    <article class="proj">
+      <div>
+        <h3>Spotify top charts analysis</h3>
+        <p>Embedded Tableau dashboards comparing song attributes across genres and tracking annual trends.</p>
+      </div>
+      <div></div>
+      <div class="tableau">
+        <div class='tableauPlaceholder' id='viz1714711230006' style='position:relative'><noscript><img alt='Spotify dashboard 1' src='https://public.tableau.com/static/images/EM/EM622Final/Dashboard1/1_rss.png'></noscript><object class='tableauViz' style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /><param name='embed_code_version' value='3' /><param name='site_root' value='' /><param name='name' value='EM622Final&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https://public.tableau.com/static/images/EM/EM622Final/Dashboard1/1.png' /><param name='display_static_image' value='yes' /><param name='language' value='en-US' /></object></div>
+        <div class='tableauPlaceholder' id='viz1714768539031' style='position:relative;margin-top:24px'><noscript><img alt='Spotify dashboard 2' src='https://public.tableau.com/static/images/Sp/SpotifySongDetailsDataAnalysis/Dashboard2/1_rss.png'></noscript><object class='tableauViz' style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /><param name='embed_code_version' value='3' /><param name='site_root' value='' /><param name='name' value='SpotifySongDetailsDataAnalysis&#47;Dashboard2' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https://public.tableau.com/static/images/Sp/SpotifySongDetailsDataAnalysis/Dashboard2/1.png' /><param name='display_static_image' value='yes' /><param name='language' value='en-US' /></object></div>
+      </div>
+    </article>
 
-        function toggleMenu() {
-    var menu = document.getElementById('menu');
-    menu.classList.toggle('show'); // Toggle the 'show' class
-}
-function goHome() {
-    // Redirect to home page
-    window.location.href = "https://savvyk05.github.io/";
-}
+    <article class="proj">
+      <div>
+        <h3>Video to text, AI assisted</h3>
+        <p>Python pipeline that converts video to audio, splits it into chunks, transcribes each with Google Speech Recognition, then sends the full transcript to OpenAI to produce meeting minutes.</p>
+        <details>
+          <summary>See sample output</summary>
+<pre>Minutes of Meeting
+Date: April 11, 20XX   Time: 2:14 p.m.   Location: Virtual
 
-    window.onscroll = function() {scrollFunction()};
+The meeting was called to order at 2:14 p.m. by Shashank Khanna,
+who introduced himself as facilitator and tested text extraction
+from video. No objections or additions to the agenda.</pre>
+        </details>
+      </div>
+      <div class="media"><video controls muted playsinline preload="metadata" poster="project_steps_poster.jpg"><source src="project_steps_video.mp4" type="video/mp4"></video></div>
+    </article>
 
-    function scrollFunction() {
-        var menuIcon = document.querySelector('.menu-icon');
-        var menuBox = document.querySelector('.menu-box');
+    <article class="proj">
+      <div>
+        <h3>Brand campaigns for Bellevue Parfums</h3>
+        <p>Influencer and social content I directed and shot for ARLYN and Jean Rich, driving 500K+ TikTok views.</p>
+        <p><a href="https://youtu.be/Hkr7YQtjLK0?si=H0Fcf8YIKZOBVrC7" target="_blank" rel="noopener">Watch the full influencer video</a></p>
+      </div>
+      <div class="duo">
+        <div class="media"><video controls muted playsinline preload="metadata"><source src="export_1729551941169.MOV" type="video/mp4"></video></div>
+        <div class="media"><video controls muted playsinline preload="metadata"><source src="export_1729553183060.MOV" type="video/mp4"></video></div>
+      </div>
+    </article>
 
-        // Get the position of the menu icon
-        var iconRect = menuIcon.getBoundingClientRect();
+    <article class="proj">
+      <div>
+        <h3>Farm to Table product requirements</h3>
+        <p>Co-authored PRD for a platform connecting Indian farmers directly with consumers, published through the Global Governance Initiative's Council on Sustainable Development.</p>
+        <p><a href="https://www.councilonsustainabledevelopment.org/post/farm-to-table-empowering-farmers-enriching-tables-a-product-requirement-document" target="_blank" rel="noopener">Read the document</a></p>
+      </div>
+      <div></div>
+    </article>
 
-        // Update the position of the menu box
-        menuBox.style.top = iconRect.top + iconRect.height + 'px';
-        menuBox.style.left = iconRect.left + 'px';
-    }
+    <article class="proj">
+      <div>
+        <h3>Shape Shooter game</h3>
+        <p>Arcade game built in Python with Pygame: player controls, arrow shooting, obstacles, score and lives.</p>
+      </div>
+      <div class="media"><video autoplay loop muted playsinline controls poster="project_video_poster.jpg"><source src="project_results_video.mp4" type="video/mp4"></video></div>
+    </article>
+  </section>
 
-    </script>
-    </section>
-    <script>function scrollToProjects() {
-            document.getElementById('project-results').scrollIntoView({ behavior: 'smooth' });
-        }
-        // Get all video elements on the page
-const videos = document.querySelectorAll('video');
+  <section id="education">
+    <h2 class="title">Education and certifications</h2>
+    <div class="edu">
+      <div><h3>M.Eng, Engineering Management</h3><p>Stevens Institute of Technology, 2024. GPA 3.86, Provost Master's Scholarship, graduate certificate in data analytics.</p></div>
+      <div><h3>B.Tech, Electrical, Electronics and Communications</h3><p>Manipal Institute of Technology, 2018. Minor in DBMS.</p></div>
+      <div><h3>Certifications</h3><p>Project Management Professional (PMP), 2026. Lean Six Sigma Foundations, 2024.</p></div>
+    </div>
+  </section>
 
-// Iterate over each video element
-videos.forEach(video => {
-    // Mute the video
-    video.muted = true;
+</div>
+</main>
+
+<footer id="contact">
+  <div class="wrap">
+    <h2>Let's talk</h2>
+    <p>Open to financial analyst, revenue and BI roles in New York and beyond.</p>
+    <div class="cta">
+      <a class="btn primary" href="mailto:skhanna5@stevens.edu">Email me</a>
+      <a class="btn" href="https://www.linkedin.com/in/shashank-khanna/" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Load Tableau embeds, sized to their container
+document.querySelectorAll('.tableauPlaceholder').forEach(function(div){
+  var viz = div.getElementsByTagName('object')[0];
+  viz.style.width = '100%';
+  viz.style.height = div.offsetWidth > 700 ? '820px' : '700px';
+  var s = document.createElement('script');
+  s.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+  viz.parentNode.insertBefore(s, viz);
 });
-
-    </script>
-    <!-- Add more sections if needed -->
+</script>
 </body>
 </html>
